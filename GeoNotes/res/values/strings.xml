@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GeoNotes</string>
+    <string name="add_item">Add item</string>
+    <string name="remove">Remove</string>
+    <string name="version">0.1</string>
+
+</resources>
