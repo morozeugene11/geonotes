@@ -12,7 +12,7 @@ import com.emoroz.geonotes.entities.Geolocation;
 public class GeolocationItemView extends LinearLayout {
 
 	private float skewX_ = 0;
-	
+
 	private TextView name_;
 
 	public GeolocationItemView(Context context) {
@@ -23,10 +23,9 @@ public class GeolocationItemView extends LinearLayout {
 
 		name_ = (TextView) findViewById(R.id.name);
 	}
-	
+
 	public void setGeolocation(Geolocation geolocation) {
 		name_.setText(geolocation.getName());
-		name_.setCompoundDrawablesWithIntrinsicBounds(geolocation.getDrawableId(), 0, 0, 0);
 	}
 
 	@Override
@@ -36,7 +35,7 @@ public class GeolocationItemView extends LinearLayout {
 		}
 		super.draw(canvas);
 	}
-	
+
 	public void setSkewX(float skewX) {
 		skewX_ = skewX;
 	}

@@ -7,11 +7,9 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationSet;
 import android.widget.ArrayAdapter;
 
 import com.emoroz.geonotes.R;
-import com.emoroz.geonotes.animation.InnerAnimatorListener;
 import com.emoroz.geonotes.entities.Geolocation;
 import com.emoroz.geonotes.views.GeolocationItemView;
 
@@ -50,13 +48,17 @@ public class GeolocationAdapter extends ArrayAdapter<Geolocation> {
 				translationX = -ANIM_X;
 				translationY = -ANIM_Y;
 			}
-			
-			ObjectAnimator skewAnimator = ObjectAnimator.ofFloat(view, "skewX", skewX, 0f);
-			ObjectAnimator translationXAnimator = ObjectAnimator.ofFloat(view, View.TRANSLATION_X, translationX, 0f);
-			ObjectAnimator translationYAnimator = ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, translationY, 0f);
-			
+
+			ObjectAnimator skewAnimator = ObjectAnimator.ofFloat(view, "skewX",
+					skewX, 0f);
+			ObjectAnimator translationXAnimator = ObjectAnimator.ofFloat(view,
+					View.TRANSLATION_X, translationX, 0f);
+			ObjectAnimator translationYAnimator = ObjectAnimator.ofFloat(view,
+					View.TRANSLATION_Y, translationY, 0f);
+
 			AnimatorSet set = new AnimatorSet();
-			set.playTogether(skewAnimator, translationXAnimator, translationYAnimator);
+			set.playTogether(skewAnimator, translationXAnimator,
+					translationYAnimator);
 			set.setDuration(400);
 			set.start();
 		}
